@@ -1,4 +1,4 @@
 export interface EstadoDTO {
     id: string,
-    nomw: string
+    nome: string
 }
