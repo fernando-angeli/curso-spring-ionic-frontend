@@ -1,9 +1,5 @@
-<!--
-  Generated template for the CategoriasPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
+ines (21 sloc)  614 Bytes
+   
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -14,14 +10,15 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-fab top right edge>
+    <button navPush="CartPage" ion-fab mini><ion-icon name="cart"></ion-icon></button>
+  </ion-fab>
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="showProdutos(item.id)">
-      <ion-thumbnail item-star>
-        <img src='{{bucketUrl}}/cat{{item.id}}.jpg'>
+      <ion-thumbnail item-start>
+        <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
       </ion-thumbnail>
-      <h2>{{ item.nome }}</h2>
+      <h2> {{ item.nome }} </h2>
     </button>
   </ion-list>
-
 </ion-content>
